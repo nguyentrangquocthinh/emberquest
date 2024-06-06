@@ -1,8 +1,9 @@
-import 'package:ember_quest/actors/water_enemy.dart';
-import 'package:ember_quest/objects/ground_block.dart';
-import 'package:ember_quest/objects/platform_block.dart';
-import 'package:ember_quest/objects/star.dart';
 import 'package:flame/components.dart';
+
+import '../actors/water_enemy.dart';
+import '../objects/ground_block.dart';
+import '../objects/platform_block.dart';
+import '../objects/star.dart';
 
 class Block {
   // gridPosition position is always segment based X,Y.
@@ -12,17 +13,6 @@ class Block {
   final Type blockType;
   Block(this.gridPosition, this.blockType);
 }
-
-/*
-* So what this does, is allows us to create segments (segment0, segment1, etc) in a list format that gets
-* added to the segments list. The individual segments will be made up of multiple entries of the Block class.
-* This information will allow us to translate the block position from a 10x10 grid to the actual pixel position
-* in the game world. To create a segment, you need to create entries for each block
-* that you wish to be rendered from the sketch.
-*/
-
-// creating segments
-
 
 final segments = [
   segment0,
